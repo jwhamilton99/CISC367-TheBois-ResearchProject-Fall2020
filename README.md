@@ -25,6 +25,14 @@ committing: `git commit -a -m "<commit message>"`
 
 pushing: `git push`
 
+## fetching
+
+when someone else does work, pull the repo. you have to pull on a branch-by-branch basis, so you'll mostly be pulling the master branch when someone else is done their section
+
+make sure you're in your branch: `git checkout <your-branch>`
+to fetch: `git fetch`
+merge into your branch: `git merge master`
+
 ## about the master branch
 
 i will do everything with the master branch. **do not mess with the master branch please for the love of god**
