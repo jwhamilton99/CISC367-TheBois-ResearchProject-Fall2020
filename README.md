@@ -21,7 +21,7 @@ you need to stage files before you push them.
 
 staging files: `git add .`
 
-committing: `git commit -a -m "<commit message>``
+committing: `git commit -a -m "<commit message>"`
 
 pushing: `git push`
 
