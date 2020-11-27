@@ -1,0 +1,9 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : "python3 main.py"
+    }
+  },
+  "identifier" : "B89E34F8-EC08-42CB-A10F-31A0E03C595C"
+}
