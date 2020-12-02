@@ -1,3 +1,9 @@
+# main.py
+# Author: Justin Hamilton
+# This script reads a merged-pythondev-help-concat-group.csv" and removes emojis and acronyms (from a list of known acronyms "acro.txt").
+# It uses regular expressions to find emojis (any length of non-whitespace characters between two colons) and the acronyms, then the re.sub() command to remove emojis and a string-concatenation algorithm to remove the acronyms. It also keeps track of the number of emojis and acronyms and a list of the text of each.
+# An output CSV file, "output.csv", is generated containing the original message, the message with emojis and acronyms removed, the number of emojis and acronyms, and a list of the emojis and acronyms for each message.
+
 import csv
 import re
 
@@ -15,10 +21,6 @@ if __name__ == "__main__":
 	outFile = open("output.csv", "w")
 	outFile.write("")
 	outFile.write("messageText\tmessageTextPostProcessing\tnumEmojis\tnumAcronyms\temojis\tacronyms\n")
-	
-	test = "hello!\nthis is a thing."
-	print(test)
-	print(re.sub("\n"," ",test))
 	
 	i = 1
 	emojiPattern = r':([\w]+[^ ]):'
