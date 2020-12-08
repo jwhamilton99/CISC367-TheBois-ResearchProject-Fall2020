@@ -16,12 +16,12 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 sia = SentimentIntensityAnalyzer()
 
-data_file = open("output.csv", "r")
+data_file = open("output.csv", "r", encoding = "utf-8")
 csv_data = csv.reader(data_file, delimiter = "\t")
 
 i = 0
 
-out_file = open("output-with-sentiment.csv", "w")
+out_file = open("output-with-sentiment.csv", "w", encoding = "utf-8")
 out_file.write("")
 out_file.write("messageText\tmessageTextPostProcessing\tnumEmojis\tnumAcronyms\temojis\tacronyms\tneg\tneu\tpos\tcompound\n")
 
