@@ -22,6 +22,10 @@ if __name__ == "__main__":
 	outFile.write("")
 	outFile.write("messageText\tmessageTextPostProcessing\tnumEmojis\tnumAcronyms\temojis\tacronyms\n")
 	
+	outFile2 = open("output-excludedmessages.csv", "w")
+	outFile2.write("")
+	outFile2.write("messageText")
+	
 	i = 1
 	emojiPattern = r':([\w]+[^ ]):'
 	for row in csvContent:
@@ -61,7 +65,11 @@ if __name__ == "__main__":
 			
 			if(foundAcro | foundEmoji):
 				outFile.write(message+"\t"+outputMessage+"\t"+str(numEmoji)+"\t"+str(numAcronyms)+"\t"+str(emojiList)+"\t"+str(acronymList)+"\n")
+			else:
+				outFile2.write(message+"\n")
 			
 			i+=1
 		
 	chatsFile.close()
+	outFile.close()
+	outFile2.close()
